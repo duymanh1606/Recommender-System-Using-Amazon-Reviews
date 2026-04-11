@@ -1,0 +1,6 @@
+software:
+    text_cols: ["title", "text"]
+    time_cols: ["timestamp"]
+
+meta_software:
+    text_cols: []
