@@ -1,6 +1,18 @@
 software:
     text_cols: ["title", "text"]
     time_cols: ["timestamp"]
+    num_cols: ["rating"]
+    missing_values:
+        drop_is_null: ["user_id"]
+        fill_constant:
+            text: "no_review"
+            title: "no_title"
+
+    numerical:
+        nul_cols: "rating"
+        non_negative: true
+        min_rate: 1
+        max_rate: 5
 
 meta_software:
     text_cols: []
