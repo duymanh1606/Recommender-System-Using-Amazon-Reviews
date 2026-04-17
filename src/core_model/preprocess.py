@@ -43,7 +43,7 @@ def handle_date(df: pd.DataFrame, current_cfg: dict) -> pd.DataFrame:
 
     for col in time_col:
         df[col] = pd.to_datetime(df[col], errors="coerce")
-        df["year" + f" {col}"] = df[col].dt.year
+        df["year"] = df[col].dt.year
         df["month"] = df[col].dt.month
         df["day"] = df[col].dt.day
         df["hour"] = df[col].dt.hour
